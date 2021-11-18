@@ -1,0 +1,31 @@
+Centilytics servers were modeled as an M X N Mesh and needed to be updated,
+all updated state = 1 and non updated state = 0.
+Now only the updated server will be able to update adjacent servers and no
+server must be updated twice. You are to write the number of days that it
+will take to update all the servers of a given N X M
+Eg. Day One
+[1 0 0]
+[0 0 0]
+[0 0 1]
+After day one the state would become
+[1 1 0]
+[1 0 1]
+[0 1 1]
+Please note that we would like to see how you transit from a problem statement
+to your proposed algorithm and then a valid function in any language you're
+comfortable with. */
+
+/* THOUGHT PATTERN
+ALL UPDATED STATE = 1
+NON UPDATED STATE = 0
+CONSTRAINT => 1. ONLY UPDATED SERVER CAN UPDATE ADJACENT SERVER
+2. NO SERVER MUST BE UPDATED TWICE.
+
+SOLUTION
+Every server can update all un-updated server in positioned at it eight adjacent cells.
+What do i mean?
+I mean a server percent at (A, B) can convert  all un-updated server positioned at (A, B-1),
+(A, B+1), (A-1, B), (A+1, B), (A-1, B-1), (A-1, B+1), (A+1, B-1), (A+1, B+1)
+
+Method is created to return the total numbers of days required to update the entire servers.
+
