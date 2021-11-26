@@ -1,3 +1,5 @@
+package solution;
+
 public class CentilyticsServersTest {
 
     public static void main(String[] args) {
@@ -5,10 +7,10 @@ public class CentilyticsServersTest {
         int variable = 3;
         int[][] servers =
                 {
-                {1, 0, 1},
-                {0, 0, 0},
-                {0, 0, 1}
-                 };
+                        {1, 0, 1},
+                        {0, 0, 0},
+                        {0, 0, 1}
+                };
 
         int noOfDaysToUpdateServers = CentilyticsServers.noOfDayToUpdateAllServers(variable, servers);
 
