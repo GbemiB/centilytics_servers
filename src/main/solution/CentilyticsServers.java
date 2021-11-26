@@ -9,13 +9,13 @@ public class CentilyticsServers {
             Queue<ServerRelationship> queue = new LinkedList<>();
 
 
-            for(int A = 0; A < variable; A++)
+            for(int i = 0; i < variable; i++)
             {
-                for(int B = 0; B < variable; B++)
+                for(int j = 0; j < variable; j++)
                 {
-                    if (servers[A][B] == 1)
+                    if (servers[i][j] == 1)
                     {
-                        queue.add(new ServerRelationship(A, B));
+                        queue.add(new ServerRelationship(i, j));
                     }
                 }
             }
